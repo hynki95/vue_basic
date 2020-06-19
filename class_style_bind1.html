@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="foo bar baz boo" id="app">Hi</p>
+    <my-component class="baz boo"></my-component>
+</body>
+    <script>
+
+        var app = new Vue({
+                el: '#app',
+                data: {
+                    message: '안녕하세요 Vue!'
+                }
+            })
+
+            app.component('my-component', {
+            template: '<p class="foo bar">Hi</p>'
+        })
+    </script>
+</html>
